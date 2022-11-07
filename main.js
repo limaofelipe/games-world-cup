@@ -19,54 +19,35 @@ function createCard(date, day, games) {
   `
 }
 
-document.querySelector("#app").innerHTML = `
-    <header>
-      <img src="./assets/logo.svg" alt="Logo do Evento Next Level Week">      
-    </header>
-      <div id="filters">      
-      <p> Utilize nossos filtros</p>
-      <div class="country-filter">
-          <input placeholder="Busque por seleção" type="text">
-      </div>
+document.querySelector("#cards").innerHTML = 
+      createCard(
+        "20/11",
+        "Domingo",
+        createGame("qatar", "13:00", "Ecuador")
+      ) +
 
-
-      <select class="group-filter">
-        <option value="Grupo A">Grupo A</option>
-        <option value="Grupo B">Grupo B</option>
-        <option value="Grupo C">Grupo C</option>
-        <option value="Grupo D">Grupo D</option>
-        <option value="Grupo E">Grupo E</option>
-        <option value="Grupo F">Grupo F</option>
-        <option value="Grupo G">Grupo G</option>
-        <option value="Grupo H">Grupo H</option>
-      </select>
-
-      <input type='date' id='date' name='dtnasc'>
-          
-      </div>
-      
-
-    <main id="cards">
-      ${createCard("20/11", "Domingo", createGame("qatar", "13:00", "Ecuador"))}
-
-      ${createCard(
-        "24/11",
-        "Quinta",
-        createGame("brazil", "16:00", "serbia") +
-          createGame("brazil", "16:00", "serbia")
-      )}
-
-      ${createCard(
-        "28/11",
+      createCard(
+        "21/11",
         "Segunda",
-        createGame("brazil", "13:00", "switzerland") +
-          createGame("qatar", "13:00", "Ecuador")
-      )}
+        createGame("senegal", "07:00", "Netherlands") +
+          createGame("england", "10:00", "iran") +
+          createGame("united states", "10:00", "Wales")
+      ) +
+
+      createCard(
+        "22/11",
+        "Terça",
+        createGame("Argentina", "07:00", "Saudi Arabia") +
+          createGame("denmark", "10:00", "tunisia") +
+          createGame("mexico", "13:00", "poland") +
+          createGame("france", "16:00", "australia")
+      ) +
       
-      ${createCard(
-        "02/12",
-        "Sexta",
-        createGame("brazil", "16:00", "cameroon") +
-          createGame("qatar", "13:00", "Ecuador")
-      )}
-    </main>`
+      createCard(
+        "23/12",
+        "Quarta",
+        createGame("morocco", "07:00", "Croatia") +
+          createGame("germany", "10:00", "japan") +
+          createGame("spain", "13:00", "costa rica") +
+          createGame("belgium", "16:00", "canada")
+      ) 

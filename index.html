@@ -13,7 +13,35 @@
 <body>
 
   <div id="app">
+    <header>
+      <img src="./assets/logo.svg" alt="Logo do Evento Next Level Week">      
+    </header>
+     <div id="filters">      
+        <p> Utilize nossos filtros</p>
+        <div class="country-filter">
+            <input placeholder="Busque por seleção" type="text">
+        </div>
 
+
+        <select class="group-filter">
+          <option value="initial"></option>
+          <option value="Grupo A">Grupo A</option>
+          <option value="Grupo B">Grupo B</option>
+          <option value="Grupo C">Grupo C</option>
+          <option value="Grupo D">Grupo D</option>
+          <option value="Grupo E">Grupo E</option>
+          <option value="Grupo F">Grupo F</option>
+          <option value="Grupo G">Grupo G</option>
+          <option value="Grupo H">Grupo H</option>
+        </select>
+
+        <input type='date' id='date' name='dtnasc'>
+          
+      </div>
+
+      <main id="cards">
+        
+      </main>
   </div>
   <script src="./main.js"></script>
 </body>
