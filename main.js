@@ -1,9 +1,20 @@
-function createGame(player1, hour, player2, avatar1, avatar2) {
+function createGame(player1, hour, player2, avatar1, avatar2, firstCountryPoints, secondCountryPoints) {
   return `
         <li>
-          <img src="${avatar1}" alt="Bandeira do ${player1}">
-          <strong>${hour}</strong>
-          <img src="${avatar2}" alt="Bandeira do ${player2}">
+            <div>
+              <img src="${avatar1}" alt="Bandeira do ${player1}">
+              <p>${player1}</p>
+            </div>
+
+            <input type="number" min="0" name="numero" class="score-input" value="${firstCountryPoints}" readonly/>
+          
+            <strong>${hour}</strong>
+
+            <input type="number" min="0" name="numero" class="score-input" value="${secondCountryPoints}" readonly/>
+          <div>
+            <img src="${avatar2}" alt="Bandeira do ${player2}">
+            <p>${player2}</p>
+          </div>
         </li>
         `
 }
@@ -27,6 +38,7 @@ function list () {
 
 }
 
+
 function create(response) {
 
   const listDataJogos = response.data
@@ -36,7 +48,7 @@ function create(response) {
   for (const [data, jogos] of Object.entries(listDataJogos)) {
     let htmlJogo = ''
     for (const [index, jogo] of jogos.entries()) {
-      htmlJogo += createGame(jogo.nameFisrtCountry, jogo.hourGame, jogo.nameSecondCountry, jogo.avatarFisrtCountry, jogo.avatarSecondCountry)
+      htmlJogo += createGame(jogo.nameFisrtCountry, jogo.hourGame, jogo.nameSecondCountry, jogo.avatarFisrtCountry, jogo.avatarSecondCountry, jogo.firstCountryPoints, jogo.secondCountryPoints)
     }
 
     html += createCard(
