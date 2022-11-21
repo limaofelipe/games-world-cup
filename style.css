@@ -61,7 +61,7 @@ header>img {
   color: #FFFFFF;
 }
 
-.group-filter ,
+#group-filter ,
 .country-filter input {
   background-color: var(--card-bg-color);
   border-radius: 10px;
@@ -72,7 +72,7 @@ header>img {
   padding-left: 10px;
 }
 
-.group-filter {
+#group-filter {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -194,7 +194,7 @@ header{
   }
 
   #date,
-  .group-filter ,
+  #group-filter ,
   .country-filter input {
     width: 158px;
   }
@@ -226,7 +226,7 @@ header{
   }
 
   #date,
-  .group-filter ,
+  #group-filter ,
   .country-filter input {
     width: 158px;
   }

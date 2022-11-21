@@ -23,19 +23,11 @@
         </div>
 
 
-        <select class="group-filter">
-          <option value="initial"></option>
-          <option value="Grupo A">Grupo A</option>
-          <option value="Grupo B">Grupo B</option>
-          <option value="Grupo C">Grupo C</option>
-          <option value="Grupo D">Grupo D</option>
-          <option value="Grupo E">Grupo E</option>
-          <option value="Grupo F">Grupo F</option>
-          <option value="Grupo G">Grupo G</option>
-          <option value="Grupo H">Grupo H</option>
+        <select id="group-filter" >
+         
         </select>
 
-        <input type='date' id='date' name='dtnasc'>
+        <input type='date' id='date'>
           
       </div>
 
@@ -47,6 +39,8 @@
   <script type="text/javascript" src="./main.js"></script>
   <script>
       list()
-</script>
+      listGroups()
+      selectGroup()
+  </script>
 </body>
 </html>
