@@ -31,6 +31,9 @@ function createCard(date, day, games) {
 }
 
 
+
+
+
 function list () {
   axios.get('http://localhost:3333/games')
   .then(response => create(response))
@@ -61,6 +64,13 @@ function create(response) {
 }
 
 
+/* function searchByCountry(nameCountry) {
+  axios.post('http://localhost:3333/countries/unique',{name:nameCountry})
+  .then(response =>  createSelectGroup(response))
+  .catch(error => console.log(error))
+} */
+
+
 function createSelectGroup(response) {
 
   const listGroups = response.data
@@ -80,8 +90,6 @@ function listGroups() {
   .catch(error => console.log(error))
 }
 
-
-
 function selectGroup() {
   document.getElementById("group-filter").addEventListener("change", selectByGroup);
   
@@ -96,10 +104,11 @@ function selectByGroup() {
   
 }
 
-
-
-function sourceCountry(nameCountry) {
-  axios.post('http://localhost:3333/countries/unique',{name:nameCountry})
-  .then(response =>  createSelectGroup(response))
-  .catch(error => console.log(error))
+function selectByDate() {
+  document.getElementById("date").addEventListener("input", function (event) {
+    let date = event.target.value
+    axios.post('http://localhost:3333/games/date', {"date":date})
+    .then(response =>  create(response))
+    .catch(error => console.log(error))
+  });
 }

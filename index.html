@@ -19,7 +19,7 @@
      <div id="filters">      
         <p> Utilize nossos filtros</p>
         <div class="country-filter">
-            <input placeholder="Busque por seleção" type="text">
+            <input placeholder="Busque por seleção" type="text" id="searchByCountry">
         </div>
 
 
@@ -27,7 +27,7 @@
          
         </select>
 
-        <input type='date' id='date'>
+        <input type='date' max="2022-12-31"  id='date'>
           
       </div>
 
@@ -39,8 +39,10 @@
   <script type="text/javascript" src="./main.js"></script>
   <script>
       list()
-      listGroups()
+      /* searchByCountry() */
       selectGroup()
+      selectByDate()
+      listGroups()
   </script>
 </body>
 </html>
