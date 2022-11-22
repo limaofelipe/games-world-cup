@@ -64,11 +64,15 @@ function create(response) {
 }
 
 
-/* function searchByCountry(nameCountry) {
-  axios.post('http://localhost:3333/countries/unique',{name:nameCountry})
-  .then(response =>  createSelectGroup(response))
+function searchByCountry() {
+  document.getElementById("searchByCountry").addEventListener("input", function(event){
+  let countryName = event.target.value
+  axios.post('http://localhost:3333/games/country',{"nameCountry":countryName})
+  .then(response =>  create(response))
   .catch(error => console.log(error))
-} */
+  })
+
+}
 
 
 function createSelectGroup(response) {
