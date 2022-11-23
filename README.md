@@ -10,3 +10,6 @@ $ git clone https://github.com/limaofelipe/games-world-cup.git
 ```
 
 <img alt="Results1" title="landing web" src=".github/screenshot.png" width="800px"/>
+
+<h3> Link para o repositório do backend </h3>
+https://github.com/IanaCris/api-copa
