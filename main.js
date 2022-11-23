@@ -1,6 +1,6 @@
 function createGame(player1, hour, player2, avatar1, avatar2, firstCountryPoints, secondCountryPoints) {
   return `
-        <li>
+          <li>
             <div>
               <img src="${avatar1}" alt="Bandeira do ${player1}">
               <p>${player1}</p>
